@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚇 Start Expo",
+      "type": "npm",
+      "script": "start",
+      "group": "build"
+    },
+    {
+      "label": "🌍 Run Web",
+      "type": "npm",
+      "script": "web",
+      "group": "build"
+    },
+    {
+      "label": "🤖 Run Android",
+      "type": "npm",
+      "script": "android",
+      "group": "build"
+    },
+    {
+      "label": "🍎 Run iOS (Simulator)",
+      "type": "npm",
+      "script": "ios",
+      "group": "build"
+    }
+  ]
+}

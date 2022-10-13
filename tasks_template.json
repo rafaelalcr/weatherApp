@@ -1,0 +1,87 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚇  Start Metro",
+      "detail": "Starts the Metro bundler",
+      "type": "npm",
+      "script": "start",
+      "group": "build"
+    },
+    {
+      "label": "🍎  Run iOS (Debug, Simulator)",
+      "detail": "Runs the Debug scheme in the iOS Simulator",
+      "type": "npm",
+      "script": "ios:debug",
+      "group": "build"
+    },
+    {
+      "label": "🍎  Run iOS (Debug, Device)",
+      "detail": "Runs the Debug scheme against a USB connected device",
+      "type": "shell",
+      "command": "npm run ios:debug -- --device",
+      "group": "build"
+    },
+    {
+      "label": "🤖  Run Android (Debug)",
+      "detail": "Runs the debug variant against all devices/emulators available to adb",
+      "type": "npm",
+      "script": "android:debug",
+      "group": "build"
+    },
+    {
+      "label": "📦  Install Cocoapods",
+      "detail": "Installs Cocoapod dependencies for iOS",
+      "type": "shell",
+      "group": "build",
+      "command": "bundle exec pod install --project-directory=./ios",
+    },
+    {
+      "label": "📦  Clean install",
+      "detail": "Deletes all dependencies and artifacts and reinstalls them from scratch",
+      "type": "shell",
+      "command": "make clean_install",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "🏷  Compile Typescript",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": "build"
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "🛠  Open in Xcode",
+      "detail": "Opens the iOS workspace in Xcode",
+      "type": "shell",
+      "command": "xed ios/Project.xcworkspace",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}
